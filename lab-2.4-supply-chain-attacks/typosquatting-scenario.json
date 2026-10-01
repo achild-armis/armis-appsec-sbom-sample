@@ -1,0 +1,20 @@
+{
+  "attack_type": "typosquatting",
+  "description": "Common package name misspellings targeting npm developers",
+  "scenarios": [
+    {"id": "typo-001", "legitimate": "express", "malicious": "expres", "error": "missing_letter", "distance": 1, "payload": "postinstall script steals environment variables"},
+    {"id": "typo-002", "legitimate": "lodash", "malicious": "lodsh", "error": "transposition", "distance": 1, "payload": "Cryptominer injected into utility functions"},
+    {"id": "typo-003", "legitimate": "react", "malicious": "reacct", "error": "double_letter", "distance": 1, "payload": "Backdoor shell access via postinstall"},
+    {"id": "typo-004", "legitimate": "moment", "malicious": "momnet", "error": "vowel_swap", "distance": 1, "payload": "Credential logger in date parsing"},
+    {"id": "typo-005", "legitimate": "webpack", "malicious": "webpck", "error": "missing_letter", "distance": 1, "payload": "Build-time code injection into bundles"},
+    {"id": "typo-006", "legitimate": "underscore", "malicious": "understcore", "error": "missing_letter", "distance": 1, "payload": "Dependency chain infection via utility functions"}
+  ],
+  "prevention": [
+    "Copy-paste package names from official registry",
+    "Pin exact versions in package-lock.json",
+    "Use npm ci instead of npm install in production",
+    "Enable npm audit on every install",
+    "Use private package registries",
+    "Enable two-factor authentication on registry accounts"
+  ]
+}

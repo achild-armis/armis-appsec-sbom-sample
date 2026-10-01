@@ -1,0 +1,59 @@
+{
+  "attack_type": "compromised_dependency",
+  "description": "Real-world package hijacking and maintenance compromise scenarios",
+  "scenarios": [
+    {
+      "id": "compromise-001",
+      "package_name": "event-stream",
+      "attack_vector": "Maintainer Account Takeover",
+      "date_compromised": "2018-11-20",
+      "days_exposed": 4,
+      "severity": "CRITICAL",
+      "payload": "Blockchain wallet stealer via flatmap-stream"
+    },
+    {
+      "id": "compromise-002",
+      "package_name": "left-pad",
+      "attack_vector": "Abandoned Package Takeover",
+      "date_compromised": "2016-04-15",
+      "days_exposed": 3,
+      "severity": "HIGH",
+      "payload": "Build system pollution - modifies Makefiles"
+    },
+    {
+      "id": "compromise-003",
+      "package_name": "ua-parser-js",
+      "attack_vector": "GitHub & NPM Account Compromise",
+      "date_compromised": "2021-02-02",
+      "days_exposed": 2,
+      "severity": "CRITICAL",
+      "payload": "Cryptocurrency miner + data exfiltration"
+    },
+    {
+      "id": "compromise-004",
+      "package_name": "eslint-scope",
+      "attack_vector": "Supply Chain through Legit Transitive Dep",
+      "date_compromised": "2018-07-12",
+      "days_exposed": 1,
+      "severity": "CRITICAL",
+      "payload": "Debugging hooks side-channel attack"
+    },
+    {
+      "id": "compromise-005",
+      "package_name": "bootstrap",
+      "attack_vector": "Monorepo Mass Injection",
+      "date_compromised": "2022-01-10",
+      "days_exposed": 1,
+      "severity": "CRITICAL",
+      "payload": "XSS injection in CSS/JS"
+    }
+  ],
+  "lessons": [
+    "No package is too small to attack (left-pad had 30M downloads)",
+    "Abandoned packages are takeover targets",
+    "2FA and strong auth are essential for maintainers",
+    "Transitive dependencies are invisible to most audits",
+    "SBOM + attestation needed at every build stage",
+    "Build-time attacks (via npm scripts) are hard to detect"
+  ]
+}

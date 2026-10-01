@@ -1,0 +1,40 @@
+{
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.4",
+  "serialNumber": "urn:uuid:c2a4f7b1-8d3e-4f9a-b2c5-d8e9f0a1b2c3",
+  "version": 1,
+  "metadata": {
+    "timestamp": "2026-10-01T14:00:00Z",
+    "tools": [{"vendor": "Armis", "name": "AppSec Training", "version": "1.0"}],
+    "component": {"type": "application", "name": "complex-web-platform", "version": "2.0.0", "description": "Complex application with policy violation scenarios"}
+  },
+  "components": [
+    {"type": "library", "name": "express", "version": "4.16.2", "purl": "pkg:npm/express@4.16.2", "licenses": [{"expression": "MIT"}]},
+    {"type": "library", "name": "lodash", "version": "4.17.4", "purl": "pkg:npm/lodash@4.17.4", "licenses": [{"expression": "MIT"}]},
+    {"type": "library", "name": "request", "version": "2.87.0", "purl": "pkg:npm/request@2.87.0", "licenses": [{"expression": "Apache-2.0"}]},
+    {"type": "library", "name": "moment", "version": "2.20.1", "purl": "pkg:npm/moment@2.20.1", "licenses": [{"expression": "MIT"}]},
+    {"type": "library", "name": "webpack", "version": "3.10.0", "purl": "pkg:npm/webpack@3.10.0", "licenses": [{"expression": "MIT"}]},
+    {"type": "library", "name": "jquery", "version": "2.2.4", "purl": "pkg:npm/jquery@2.2.4", "licenses": [{"expression": "MIT"}]},
+    {"type": "library", "name": "angular", "version": "1.6.4", "purl": "pkg:npm/angular@1.6.4", "licenses": [{"expression": "MIT"}]},
+    {"type": "library", "name": "react", "version": "15.5.4", "purl": "pkg:npm/react@15.5.4", "licenses": [{"expression": "MIT"}]},
+    {"type": "library", "name": "babel-core", "version": "6.24.1", "purl": "pkg:npm/babel-core@6.24.1", "licenses": [{"expression": "MIT"}]},
+    {"type": "library", "name": "underscore", "version": "1.8.3", "purl": "pkg:npm/underscore@1.8.3", "licenses": [{"expression": "MIT"}]},
+    {"type": "library", "name": "express-session", "version": "1.15.1", "purl": "pkg:npm/express-session@1.15.1", "licenses": [{"expression": "MIT"}]},
+    {"type": "library", "name": "passport", "version": "0.3.2", "purl": "pkg:npm/passport@0.3.2", "licenses": [{"expression": "MIT"}]},
+    {"type": "library", "name": "mongoose", "version": "4.10.3", "purl": "pkg:npm/mongoose@4.10.3", "licenses": [{"expression": "MIT"}]},
+    {"type": "library", "name": "mysql", "version": "2.13.0", "purl": "pkg:npm/mysql@2.13.0", "licenses": [{"expression": "MIT"}]},
+    {"type": "library", "name": "redis", "version": "2.6.5", "purl": "pkg:npm/redis@2.6.5", "licenses": [{"expression": "MIT"}]}
+  ],
+  "vulnerabilities": [
+    {"ref": "pkg:npm/express@4.16.2", "id": "CVE-2018-3710", "ratings": [{"score": 5.3, "severity": "MEDIUM"}]},
+    {"ref": "pkg:npm/lodash@4.17.4", "id": "CVE-2019-10744", "ratings": [{"score": 9.8, "severity": "CRITICAL"}]},
+    {"ref": "pkg:npm/request@2.87.0", "id": "CVE-2017-16168", "ratings": [{"score": 7.5, "severity": "HIGH"}]},
+    {"ref": "pkg:npm/moment@2.20.1", "id": "CVE-2022-24999", "ratings": [{"score": 7.5, "severity": "HIGH"}]},
+    {"ref": "pkg:npm/webpack@3.10.0", "id": "CVE-2017-16877", "ratings": [{"score": 8.1, "severity": "HIGH"}]},
+    {"ref": "pkg:npm/jquery@2.2.4", "id": "CVE-2020-11022", "ratings": [{"score": 6.1, "severity": "MEDIUM"}]},
+    {"ref": "pkg:npm/angular@1.6.4", "id": "CVE-2019-10768", "ratings": [{"score": 7.5, "severity": "HIGH"}]},
+    {"ref": "pkg:npm/react@15.5.4", "id": "CVE-2017-16169", "ratings": [{"score": 5.3, "severity": "MEDIUM"}]},
+    {"ref": "pkg:npm/babel-core@6.24.1", "id": "CVE-2018-20581", "ratings": [{"score": 7.5, "severity": "HIGH"}]},
+    {"ref": "pkg:npm/mongoose@4.10.3", "id": "CVE-2019-1010317", "ratings": [{"score": 9.8, "severity": "CRITICAL"}]}
+  ]
+}

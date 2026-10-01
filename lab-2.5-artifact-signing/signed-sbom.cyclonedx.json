@@ -1,0 +1,26 @@
+{
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.4",
+  "serialNumber": "urn:uuid:a1b2c3d4-e5f6-4a5b-6c7d-8e9f0a1b2c3d",
+  "version": 1,
+  "metadata": {
+    "timestamp": "2026-10-01T14:00:00Z",
+    "tools": [{"vendor": "Armis", "name": "AppSec Training", "version": "1.0"}],
+    "component": {"type": "application", "name": "signed-artifact-example", "version": "1.0.0"},
+    "signature": {
+      "algorithm": "RS256",
+      "key_id": "0x4A5B6C7D8E9F0A1B",
+      "signed_by": "build-system@armis.local",
+      "timestamp": "2026-10-01T14:00:00Z",
+      "digest_algorithm": "SHA-256"
+    }
+  },
+  "components": [
+    {"type": "library", "name": "express", "version": "4.18.2", "purl": "pkg:npm/express@4.18.2", "licenses": [{"expression": "MIT"}]},
+    {"type": "library", "name": "lodash", "version": "4.17.21", "purl": "pkg:npm/lodash@4.17.21", "licenses": [{"expression": "MIT"}]},
+    {"type": "library", "name": "webpack", "version": "5.88.0", "purl": "pkg:npm/webpack@5.88.0", "licenses": [{"expression": "MIT"}]}
+  ],
+  "vulnerabilities": [
+    {"ref": "pkg:npm/express@4.18.2", "id": "CVE-2022-24999", "ratings": [{"score": 3.5, "severity": "LOW"}]}
+  ]
+}
