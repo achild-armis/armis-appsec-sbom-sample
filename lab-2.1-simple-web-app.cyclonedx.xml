@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bom xmlns="http://cyclonedx.org/schema/bom/1.4" serialNumber="urn:uuid:3e671687-395b-41f5-a30f-a58921a69b79" version="1">
+  <metadata>
+    <timestamp>2026-10-01T12:00:00Z</timestamp>
+    <tools>
+      <tool>
+        <vendor>Armis</vendor>
+        <name>AppSec Training</name>
+        <version>1.0</version>
+      </tool>
+    </tools>
+    <component type="application">
+      <name>simple-web-app</name>
+      <version>1.0.0</version>
+      <description>Basic web application with intentional vulnerable dependencies</description>
+    </component>
+  </metadata>
+  <components>
+    <component type="library">
+      <name>express</name>
+      <version>4.16.2</version>
+      <purl>pkg:npm/express@4.16.2</purl>
+      <cpe>cpe:2.3:a:expressjs:express:4.16.2:*:*:*:*:*:*:*</cpe>
+      <description>Fast, unopinionated web framework for node</description>
+    </component>
+    <component type="library">
+      <name>lodash</name>
+      <version>4.17.4</version>
+      <purl>pkg:npm/lodash@4.17.4</purl>
+      <cpe>cpe:2.3:a:lodash:lodash:4.17.4:*:*:*:*:*:*:*</cpe>
+      <description>Lodash modular utilities</description>
+    </component>
+    <component type="library">
+      <name>request</name>
+      <version>2.87.0</version>
+      <purl>pkg:npm/request@2.87.0</purl>
+      <cpe>cpe:2.3:a:request:request:2.87.0:*:*:*:*:*:*:*</cpe>
+      <description>Simplified HTTP client for Node.js</description>
+    </component>
+    <component type="library">
+      <name>qs</name>
+      <version>6.5.1</version>
+      <purl>pkg:npm/qs@6.5.1</purl>
+      <cpe>cpe:2.3:a:qs:qs:6.5.1:*:*:*:*:*:*:*</cpe>
+      <description>Query string parser</description>
+    </component>
+    <component type="library">
+      <name>moment</name>
+      <version>2.20.1</version>
+      <purl>pkg:npm/moment@2.20.1</purl>
+      <cpe>cpe:2.3:a:moment:moment:2.20.1:*:*:*:*:*:*:*</cpe>
+      <description>Parse, validate, manipulate, and display dates</description>
+    </component>
+    <component type="library">
+      <name>xml2js</name>
+      <version>0.4.19</version>
+      <purl>pkg:npm/xml2js@0.4.19</purl>
+      <cpe>cpe:2.3:a:xml2js:xml2js:0.4.19:*:*:*:*:*:*:*</cpe>
+      <description>Simple XML to JavaScript object converter</description>
+    </component>
+    <component type="library">
+      <name>mongoose</name>
+      <version>5.0.1</version>
+      <purl>pkg:npm/mongoose@5.0.1</purl>
+      <cpe>cpe:2.3:a:mongoose:mongoose:5.0.1:*:*:*:*:*:*:*</cpe>
+      <description>MongoDB object modeling for Node.js</description>
+    </component>
+    <component type="library">
+      <name>debug</name>
+      <version>3.1.0</version>
+      <purl>pkg:npm/debug@3.1.0</purl>
+      <cpe>cpe:2.3:a:debug:debug:3.1.0:*:*:*:*:*:*:*</cpe>
+      <description>Debugging utility</description>
+    </component>
+  </components>
+  <vulnerabilities>
+    <vulnerability ref="pkg:npm/express@4.16.2">
+      <id>CVE-2018-3710</id>
+      <source name="NVD" url="https://nvd.nist.gov/vuln/detail/CVE-2018-3710"/>
+      <ratings>
+        <rating score="5.3" severity="MEDIUM" method="CVSSv3"/>
+      </ratings>
+      <description>Express.js before 4.16.3 allows open redirect vulnerability</description>
+    </vulnerability>
+    <vulnerability ref="pkg:npm/lodash@4.17.4">
+      <id>CVE-2019-10744</id>
+      <source name="NVD" url="https://nvd.nist.gov/vuln/detail/CVE-2019-10744"/>
+      <ratings>
+        <rating score="9.8" severity="CRITICAL" method="CVSSv3"/>
+      </ratings>
+      <description>lodash before 4.17.19 has a prototype pollution vulnerability</description>
+    </vulnerability>
+    <vulnerability ref="pkg:npm/request@2.87.0">
+      <id>CVE-2017-16168</id>
+      <source name="NVD" url="https://nvd.nist.gov/vuln/detail/CVE-2017-16168"/>
+      <ratings>
+        <rating score="7.5" severity="HIGH" method="CVSSv3"/>
+      </ratings>
+      <description>request package allows arbitrary code execution via SSRF</description>
+    </vulnerability>
+    <vulnerability ref="pkg:npm/qs@6.5.1">
+      <id>CVE-2017-1000381</id>
+      <source name="NVD" url="https://nvd.nist.gov/vuln/detail/CVE-2017-1000381"/>
+      <ratings>
+        <rating score="7.5" severity="HIGH" method="CVSSv3"/>
+      </ratings>
+      <description>qs before 6.5.3 allows prototype pollution</description>
+    </vulnerability>
+    <vulnerability ref="pkg:npm/moment@2.20.1">
+      <id>CVE-2022-24999</id>
+      <source name="NVD" url="https://nvd.nist.gov/vuln/detail/CVE-2022-24999"/>
+      <ratings>
+        <rating score="7.5" severity="HIGH" method="CVSSv3"/>
+      </ratings>
+      <description>moment before 2.29.4 allows ReDoS in parsing</description>
+    </vulnerability>
+    <vulnerability ref="pkg:npm/xml2js@0.4.19">
+      <id>CVE-2014-4940</id>
+      <source name="NVD" url="https://nvd.nist.gov/vuln/detail/CVE-2014-4940"/>
+      <ratings>
+        <rating score="6.5" severity="MEDIUM" method="CVSSv3"/>
+      </ratings>
+      <description>xml2js allows XXE (XML External Entity) injection</description>
+    </vulnerability>
+  </vulnerabilities>
+</bom>

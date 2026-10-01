@@ -1,0 +1,6 @@
+# Training app with intentional vulnerable dependencies
+flask==0.12.3
+jinja2==2.9.0
+requests==2.20.0
+sqlalchemy==1.1.11
+werkzeug==0.12.2

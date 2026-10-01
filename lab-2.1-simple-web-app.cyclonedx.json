@@ -1,0 +1,186 @@
+{
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.4",
+  "serialNumber": "urn:uuid:3e671687-395b-41f5-a30f-a58921a69b79",
+  "version": 1,
+  "metadata": {
+    "timestamp": "2026-10-01T12:00:00Z",
+    "tools": [
+      {
+        "vendor": "Armis",
+        "name": "AppSec Training",
+        "version": "1.0"
+      }
+    ],
+    "component": {
+      "type": "application",
+      "name": "simple-web-app",
+      "version": "1.0.0",
+      "description": "Basic web application with intentional vulnerable dependencies"
+    }
+  },
+  "components": [
+    {
+      "type": "library",
+      "name": "express",
+      "version": "4.16.2",
+      "purl": "pkg:npm/express@4.16.2",
+      "cpe": "cpe:2.3:a:expressjs:express:4.16.2:*:*:*:*:*:*:*",
+      "description": "Fast, unopinionated web framework for node"
+    },
+    {
+      "type": "library",
+      "name": "lodash",
+      "version": "4.17.4",
+      "purl": "pkg:npm/lodash@4.17.4",
+      "cpe": "cpe:2.3:a:lodash:lodash:4.17.4:*:*:*:*:*:*:*",
+      "description": "Lodash modular utilities"
+    },
+    {
+      "type": "library",
+      "name": "request",
+      "version": "2.87.0",
+      "purl": "pkg:npm/request@2.87.0",
+      "cpe": "cpe:2.3:a:request:request:2.87.0:*:*:*:*:*:*:*",
+      "description": "Simplified HTTP client for Node.js"
+    },
+    {
+      "type": "library",
+      "name": "qs",
+      "version": "6.5.1",
+      "purl": "pkg:npm/qs@6.5.1",
+      "cpe": "cpe:2.3:a:qs:qs:6.5.1:*:*:*:*:*:*:*",
+      "description": "Query string parser"
+    },
+    {
+      "type": "library",
+      "name": "moment",
+      "version": "2.20.1",
+      "purl": "pkg:npm/moment@2.20.1",
+      "cpe": "cpe:2.3:a:moment:moment:2.20.1:*:*:*:*:*:*:*",
+      "description": "Parse, validate, manipulate, and display dates"
+    },
+    {
+      "type": "library",
+      "name": "xml2js",
+      "version": "0.4.19",
+      "purl": "pkg:npm/xml2js@0.4.19",
+      "cpe": "cpe:2.3:a:xml2js:xml2js:0.4.19:*:*:*:*:*:*:*",
+      "description": "Simple XML to JavaScript object converter"
+    },
+    {
+      "type": "library",
+      "name": "mongoose",
+      "version": "5.0.1",
+      "purl": "pkg:npm/mongoose@5.0.1",
+      "cpe": "cpe:2.3:a:mongoose:mongoose:5.0.1:*:*:*:*:*:*:*",
+      "description": "MongoDB object modeling for Node.js"
+    },
+    {
+      "type": "library",
+      "name": "debug",
+      "version": "3.1.0",
+      "purl": "pkg:npm/debug@3.1.0",
+      "cpe": "cpe:2.3:a:debug:debug:3.1.0:*:*:*:*:*:*:*",
+      "description": "Debugging utility"
+    }
+  ],
+  "vulnerabilities": [
+    {
+      "ref": "pkg:npm/express@4.16.2",
+      "id": "CVE-2018-3710",
+      "source": {
+        "name": "NVD",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2018-3710"
+      },
+      "ratings": [
+        {
+          "score": 5.3,
+          "severity": "MEDIUM",
+          "method": "CVSSv3"
+        }
+      ],
+      "description": "Express.js before 4.16.3 allows open redirect vulnerability"
+    },
+    {
+      "ref": "pkg:npm/lodash@4.17.4",
+      "id": "CVE-2019-10744",
+      "source": {
+        "name": "NVD",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2019-10744"
+      },
+      "ratings": [
+        {
+          "score": 9.8,
+          "severity": "CRITICAL",
+          "method": "CVSSv3"
+        }
+      ],
+      "description": "lodash before 4.17.19 has a prototype pollution vulnerability"
+    },
+    {
+      "ref": "pkg:npm/request@2.87.0",
+      "id": "CVE-2017-16168",
+      "source": {
+        "name": "NVD",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2017-16168"
+      },
+      "ratings": [
+        {
+          "score": 7.5,
+          "severity": "HIGH",
+          "method": "CVSSv3"
+        }
+      ],
+      "description": "request package allows arbitrary code execution via SSRF"
+    },
+    {
+      "ref": "pkg:npm/qs@6.5.1",
+      "id": "CVE-2017-1000381",
+      "source": {
+        "name": "NVD",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2017-1000381"
+      },
+      "ratings": [
+        {
+          "score": 7.5,
+          "severity": "HIGH",
+          "method": "CVSSv3"
+        }
+      ],
+      "description": "qs before 6.5.3 allows prototype pollution"
+    },
+    {
+      "ref": "pkg:npm/moment@2.20.1",
+      "id": "CVE-2022-24999",
+      "source": {
+        "name": "NVD",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2022-24999"
+      },
+      "ratings": [
+        {
+          "score": 7.5,
+          "severity": "HIGH",
+          "method": "CVSSv3"
+        }
+      ],
+      "description": "moment before 2.29.4 allows ReDoS in parsing"
+    },
+    {
+      "ref": "pkg:npm/xml2js@0.4.19",
+      "id": "CVE-2014-4940",
+      "source": {
+        "name": "NVD",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2014-4940"
+      },
+      "ratings": [
+        {
+          "score": 6.5,
+          "severity": "MEDIUM",
+          "method": "CVSSv3"
+        }
+      ],
+      "description": "xml2js allows XXE (XML External Entity) injection"
+    }
+  ]
+}

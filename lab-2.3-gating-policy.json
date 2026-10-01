@@ -1,0 +1,95 @@
+{
+  "version": "1.0",
+  "policy_name": "Training - Supply Chain Security Gating",
+  "description": "Policy enforcement for Lab 2.3 - Dependency Gating & Policy",
+  "created": "2026-10-01",
+  "rules": [
+    {
+      "id": "rule-1",
+      "name": "Fail on CRITICAL vulnerabilities",
+      "type": "vulnerability_severity",
+      "severity": "CRITICAL",
+      "action": "FAIL_BUILD",
+      "description": "Block any build with CRITICAL CVEs"
+    },
+    {
+      "id": "rule-2",
+      "name": "Warn on HIGH vulnerabilities",
+      "type": "vulnerability_severity",
+      "severity": "HIGH",
+      "action": "WARN",
+      "allowed": 5,
+      "description": "Allow up to 5 HIGH CVEs, warn on build"
+    },
+    {
+      "id": "rule-3",
+      "name": "Block unknown licenses",
+      "type": "license",
+      "licenses": [
+        "AGPL-3.0",
+        "GPL-2.0",
+        "GPL-3.0"
+      ],
+      "action": "FAIL_BUILD",
+      "description": "Reject copyleft licenses"
+    },
+    {
+      "id": "rule-4",
+      "name": "Deprecated dependencies",
+      "type": "deprecated",
+      "packages": [
+        "request",
+        "lodash"
+      ],
+      "action": "WARN",
+      "description": "These packages are deprecated - plan migration"
+    },
+    {
+      "id": "rule-5",
+      "name": "Outdated major versions",
+      "type": "version_age",
+      "months_old": 24,
+      "action": "REPORT",
+      "description": "Flag packages >2 years old for review"
+    },
+    {
+      "id": "rule-6",
+      "name": "Transitive dependency depth",
+      "type": "transitive_depth",
+      "max_depth": 10,
+      "action": "WARN",
+      "description": "Warn if dependency tree exceeds 10 levels"
+    }
+  ],
+  "exceptions": [
+    {
+      "package": "express",
+      "version": "4.16.2",
+      "cve": "CVE-2018-3710",
+      "exception_reason": "In production - migration planned for Q4",
+      "approved_by": "security-team",
+      "expires": "2026-12-31"
+    },
+    {
+      "package": "lodash",
+      "version": "4.17.4",
+      "cve": "CVE-2019-10744",
+      "exception_reason": "Lab training environment only",
+      "approved_by": "training-admin",
+      "expires": "2026-10-31"
+    }
+  ],
+  "whitelist": [
+    {
+      "vendor": "internal-services",
+      "pattern": "github.com/achild-armis/*",
+      "description": "Internal Armis services - always approved"
+    }
+  ],
+  "report_thresholds": {
+    "critical_vulnerabilities": 0,
+    "high_vulnerabilities": 3,
+    "medium_vulnerabilities": 10,
+    "low_vulnerabilities": 100
+  }
+}

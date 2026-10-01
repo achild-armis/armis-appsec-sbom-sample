@@ -1,0 +1,31 @@
+{
+  "name": "vulnerable-npm-app",
+  "version": "1.0.0",
+  "description": "Training app with intentional vulnerable dependencies",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "jest"
+  },
+  "keywords": [
+    "training",
+    "security",
+    "vulnerable"
+  ],
+  "author": "Armis AppSec",
+  "license": "MIT",
+  "dependencies": {
+    "express": "4.16.2",
+    "lodash": "4.17.4",
+    "request": "2.87.0",
+    "qs": "6.5.1",
+    "moment": "2.20.1",
+    "xml2js": "0.4.19",
+    "mongoose": "5.0.1",
+    "debug": "3.1.0"
+  },
+  "devDependencies": {
+    "jest": "22.0.0",
+    "eslint": "4.15.0"
+  }
+}

@@ -1,0 +1,58 @@
+# Node modules
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json.bak
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+.venv
+poetry.lock.bak
+
+# Ruby
+Gemfile.lock.bak
+*.gem
+.bundle/
+vendor/bundle/
+
+# Go
+vendor/
+go.sum.bak
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Lab outputs
+findings.txt
+findings.json
+results.txt
+results.json
+*.sarif
+*.junit.xml
+
+# Armis CLI cache
+.armis/
+*.armis-cache
+
+# Credentials (should not commit)
+.env
+.env.local
+*.key
+*.pem
+
+# Scan artifacts
+scan-output/
+temp-scans/
